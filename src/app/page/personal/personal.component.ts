@@ -8,11 +8,9 @@ import { CommonModule } from '@angular/common';
   selector: 'app-personal',
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './personal.component.html',
-  styleUrl: './personal.component.css'
+  styleUrl: './personal.component.css',
 })
 export class PersonalComponent implements OnInit {
- 
-
   fb = inject(FormBuilder);
   router = inject(Router);
   infoService = inject(InfoService);
@@ -20,28 +18,26 @@ export class PersonalComponent implements OnInit {
   personalForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
-    email: ['' , [Validators.required, Validators.email]],
-    phone: ['' , [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-    terms: [false, Validators.requiredTrue]
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+    terms: [false, Validators.requiredTrue],
   });
 
-
   ngOnInit(): void {
-    if(this.infoService.infoPersonal().time === ''){
+    if (this.infoService.infoPersonal().time === '') {
       this.router.navigate(['/']);
     }
-  } 
-
-
+  }
 
   onSubmit() {
     if (this.personalForm.valid) {
-      const { firstName, lastName, email, phone, terms } = this.personalForm.value;
-      
+      const { firstName, lastName, email, phone, terms } =
+        this.personalForm.value;
+
       this.infoService.setOtherInfo(
-        firstName || '', 
-        lastName || '', 
-        email || '', 
+        firstName || '',
+        lastName || '',
+        email || '',
         phone || '',
         terms || false
       );
@@ -52,5 +48,4 @@ export class PersonalComponent implements OnInit {
       this.router.navigate(['/details']);
     }
   }
-
 }

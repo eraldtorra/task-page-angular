@@ -1,5 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { InfoService } from '../../service/info.service';
 import { CommonModule } from '@angular/common';
@@ -11,8 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './time.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TimeComponent { 
-
+export class TimeComponent {
   fb = inject(FormBuilder);
   router = inject(Router);
   infoService = inject(InfoService);
@@ -28,11 +32,11 @@ export class TimeComponent {
     '3 PM CST',
     '4 PM CST',
     '5 PM CST',
-    '6 PM CST'
+    '6 PM CST',
   ];
 
   timeForm = this.fb.group({
-    selectedTime: ['', Validators.required]
+    selectedTime: ['', Validators.required],
   });
 
   onSubmit() {
@@ -43,6 +47,4 @@ export class TimeComponent {
       this.router.navigate(['/personal']);
     }
   }
-
-
 }

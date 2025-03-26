@@ -1,10 +1,61 @@
-<div class="d-flex flex-column align-items-center mt-5 gap-4">
+<div class="d-flex flex-column align-items-center">
+  <div class="w-100">
+    <div
+      class="pt-4 px-2 d-flex flex-column flex-md-row justify-content-around"
+    >
+      <img src="../assets/logo.png" alt="logo" [routerLink]="['/']" routerLinkActive="router-link-active"  class="imageSize" />
+      <div>
+        <p class="fw-bold text-primary">
+          Talk to a Consolidation Specialist
+          <i class="ms-2 bi bi-telephone"></i>
+          <a href="tel:+18888888888" class="text-decoration-none text-primary"
+            >(888) 888-8888</a
+          >
+        </p>
+      </div>
+    </div>
+    <hr />
+  </div>
 
-  <router-outlet></router-outlet>
+  <div class="d-flex flex-column align-items-center mt-3 gap-4">
+    <router-outlet></router-outlet>
 
-  <div>
-    <p class="mt-3 textTerms">
-      Tems and Conditions | Privacy Policy | Californa Privacy
-   </p>
+    <div class="text-center w-100">
+      <p class="mt-3 textTerms">
+        Terms and Conditions | Privacy Policy | California Privacy
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-body-secondary w-100">
+    <div class="container pt-5 py-5 w-75">
+      <p class="textTerms">
+        This site is not a part of the Facebook website or Facebook Inc.
+        Additionally, Facebook does NOT endorse this site FACEBOOK is a
+        trademark of FACEBOOK, Inc. This site is not a part of the YouTube
+        website or Google, LLC. Additionally, This site is NOT endorsed by
+        Google in any way.
+      </p>
+      <p class="textTerms">
+        While we may provide you preliminary information on whether you qualify
+        for compensation, your local governing body ultimately determines who
+        qualifies and what claims are paid. This site is provided for
+        informational purposes only If you have questions about whether you
+        qualify, please contact an attorney.
+      </p>
+      <p class="textTerms">THIS IS A PAID ATTORNEY / ADVOCATE ADVERTISEMENT</p>
+      <p class="textTerms">
+        "While we may provide you preliminary information on whether you may
+        qualify for compensation, the U.S. District Court Eastern District of
+        North Carolina ultimately determines who qualifies and what claims are
+        paid. This site is provided for informational purposes only. If you have
+        questions about whether you qualify, please contact an attorney.
+      </p>
+      <p class="textTerms">
+        This website uses Google Analytics and Google Ads to track your journey
+        for marketing purposes. If you wish to opt-out of user-tracking click
+        here.
+      </p>
+    </div>
   </div>
 </div>
