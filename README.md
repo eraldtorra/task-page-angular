@@ -1,7 +1,31 @@
-# PageDetyra
+# Task Page Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+## Introduction
+This project is an Angular 19 application. It uses Bootstrap for styling.
 
+## Prerequisites
+Before running the project, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 14.x or later)
+- [Angular CLI](https://angular.io/cli) (version 12.x or later)
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/eraldtorra/task-page-angular.git
+    cd task-page-angular
+    ```
+
+2. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+## Running the Project
+
+To start the development server, run:
+```sh
+ng serve
 ## Development server
 
 To start a local development server, run:
